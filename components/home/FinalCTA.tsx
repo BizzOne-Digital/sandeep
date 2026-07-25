@@ -57,7 +57,7 @@ export default function FinalCTA() {
             </a>
 
             <a
-              href="mailto:benipalsandeep03@gmail.com"
+              href="mailto:btechecoclean@gmail.com"
               className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all hover:scale-105 flex items-center gap-3"
             >
               <Mail className="w-6 h-6" />

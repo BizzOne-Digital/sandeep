@@ -109,19 +109,19 @@ export default function ServicesPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-navy-900 to-navy-700 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold text-gray-900">
             Services
           </h1>
-          <p className="text-gray-600 mt-2">Manage your cleaning services</p>
+          <p className="text-gray-900 mt-2 font-medium">Manage your cleaning services</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleNew}
-          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-eco-500 to-eco-600 text-white rounded-lg shadow-lg hover:shadow-eco-500/50 transition-all"
+          className="flex items-center space-x-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg hover:shadow-xl font-semibold transition-all"
         >
           <PlusIcon className="w-5 h-5" />
-          <span className="font-medium">Add Service</span>
+          <span>Add Service</span>
         </motion.button>
       </div>
 

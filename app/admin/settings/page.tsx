@@ -95,10 +95,10 @@ export default function SettingsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-navy-900 to-navy-700 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold text-gray-900">
           Site Settings
         </h1>
-        <p className="text-gray-600 mt-2">Configure your site preferences and business information</p>
+        <p className="text-gray-900 mt-2 font-medium">Configure your site preferences and business information</p>
       </div>
 
       <motion.div
@@ -181,7 +181,7 @@ export default function SettingsPage() {
                 type="text"
                 value={settings.serviceAreas.join(', ')}
                 onChange={(e) => handleServiceAreas(e.target.value)}
-                placeholder="Toronto, Mississauga, Brampton"
+                placeholder="Edmonton, St. Albert, Sherwood Park"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-eco-500 focus:border-transparent"
               />
             </div>
@@ -233,7 +233,7 @@ export default function SettingsPage() {
             <button
               type="submit"
               disabled={saving}
-              className="px-8 py-3 bg-gradient-to-r from-eco-500 to-eco-600 text-white rounded-lg hover:shadow-lg font-medium transition-all disabled:opacity-50"
+              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg hover:shadow-xl font-semibold transition-all disabled:opacity-50"
             >
               {saving ? 'Saving...' : 'Save Settings'}
             </button>

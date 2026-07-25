@@ -2,17 +2,16 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 
 export interface IGalleryProject extends Document {
   title: string;
-  slug: string;
   description: string;
-  category: 'Homes' | 'Kitchens' | 'Bathrooms' | 'Offices' | 'Retail' | 'Post-Construction' | 'Before & After';
-  serviceType: string;
-  location?: string;
-  images: string[];
-  beforeImage?: string;
-  afterImage?: string;
+  category: string;
+  imageUrl: string;
+  beforeImageUrl?: string;
+  afterImageUrl?: string;
   isFeatured: boolean;
   isPublished: boolean;
   order: number;
+  tags: string[];
+  projectDate?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,28 +22,27 @@ const GalleryProjectSchema = new Schema<IGalleryProject>(
       type: String,
       required: true,
     },
-    slug: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     description: {
       type: String,
-      required: true,
+      default: '',
     },
     category: {
       type: String,
-      enum: ['Homes', 'Kitchens', 'Bathrooms', 'Offices', 'Retail', 'Post-Construction', 'Before & After'],
       required: true,
+      default: 'Before/After',
     },
-    serviceType: {
+    imageUrl: {
       type: String,
-      required: true,
+      default: '',
     },
-    location: String,
-    images: [String],
-    beforeImage: String,
-    afterImage: String,
+    beforeImageUrl: {
+      type: String,
+      default: '',
+    },
+    afterImageUrl: {
+      type: String,
+      default: '',
+    },
     isFeatured: {
       type: Boolean,
       default: false,
@@ -57,13 +55,20 @@ const GalleryProjectSchema = new Schema<IGalleryProject>(
       type: Number,
       default: 0,
     },
+    tags: {
+      type: [String],
+      default: [],
+    },
+    projectDate: {
+      type: String,
+      default: '',
+    },
   },
   {
     timestamps: true,
   }
 );
 
-GalleryProjectSchema.index({ slug: 1 });
 GalleryProjectSchema.index({ category: 1, order: 1 });
 GalleryProjectSchema.index({ isPublished: 1, isFeatured: -1 });
 

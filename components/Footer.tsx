@@ -171,16 +171,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:benipalsandeep03@gmail.com"
+                  href="mailto:btechecoclean@gmail.com"
                   className="flex items-center gap-3 text-cream-soft/80 hover:text-eco-light transition-colors text-sm group"
                 >
                   <Mail className="w-5 h-5 text-eco group-hover:scale-110 transition-transform" />
-                  <span className="break-all">benipalsandeep03@gmail.com</span>
+                  <span className="break-all">btechecoclean@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-cream-soft/80 text-sm">
                 <MapPin className="w-5 h-5 text-eco flex-shrink-0 mt-0.5" />
-                <span>Serving Toronto, Mississauga, Brampton, Oakville, Vaughan</span>
+                <span>Serving Edmonton, St. Albert, Sherwood Park, Leduc, Spruce Grove</span>
               </li>
               <li className="flex items-start gap-3 text-cream-soft/80 text-sm">
                 <Clock className="w-5 h-5 text-eco flex-shrink-0 mt-0.5" />

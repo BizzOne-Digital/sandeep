@@ -11,7 +11,7 @@ async function seed() {
     console.log('🌱 Starting database seed...');
 
     // Create admin user from environment variables
-    const adminEmail = process.env.ADMIN_SEED_EMAIL || 'benipalsandeep03@gmail.com';
+    const adminEmail = process.env.ADMIN_SEED_EMAIL || 'btechecoclean@gmail.com';
     const adminPassword = process.env.ADMIN_SEED_PASSWORD || 'admin123';
 
     const existingAdmin = await User.findOne({ email: adminEmail });
@@ -35,9 +35,9 @@ async function seed() {
       await SiteSettings.create({
         businessName: 'B.Tech Eco Clean',
         phone: '+1 416-710-5808',
-        email: 'benipalsandeep03@gmail.com',
+        email: 'btechecoclean@gmail.com',
         smsNumber: '+14167105808',
-        serviceAreas: ['Toronto', 'Mississauga', 'Brampton', 'Oakville', 'Vaughan'],
+        serviceAreas: ['Edmonton', 'St. Albert', 'Sherwood Park', 'Leduc', 'Spruce Grove'],
       });
       console.log('✅ Site settings created');
     }
@@ -245,7 +245,7 @@ async function seed() {
         slug: 'recurring-home-pricing',
         category: 'Residential' as const,
         description: 'Regular maintenance cleaning for your home',
-        price: 129,
+        price: 99,
         priceLabel: 'from',
         priceUnit: 'visit',
         frequency: 'Weekly, Bi-weekly, or Monthly',

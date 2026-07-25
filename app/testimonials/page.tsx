@@ -7,7 +7,7 @@ const testimonials = [
   {
     id: 1,
     name: 'Sarah Johnson',
-    location: 'Toronto, ON',
+    location: 'Edmonton, AB',
     service: 'Recurring Home Cleaning',
     rating: 5,
     text: 'B.Tech Eco Clean has been a game-changer for our family. Their team is professional, thorough, and always uses eco-friendly products. Our home has never felt cleaner or healthier!',
@@ -52,7 +52,7 @@ const testimonials = [
   {
     id: 6,
     name: 'James Wilson',
-    location: 'Toronto, ON',
+    location: 'Edmonton, AB',
     service: 'Green Deep Clean',
     rating: 5,
     text: 'As someone with allergies, I appreciate B.Tech\'s commitment to plant-based products. The green deep clean made a noticeable difference in air quality!',

@@ -157,7 +157,7 @@ export default function ContactPage() {
                 </motion.a>
 
                 <motion.a
-                  href="mailto:benipalsandeep03@gmail.com"
+                  href="mailto:btechecoclean@gmail.com"
                   whileHover={{ scale: 1.02 }}
                   className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl hover:bg-primary/10 transition-colors"
                 >
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-charcoal">Email</div>
-                    <div className="text-primary text-sm break-all">benipalsandeep03@gmail.com</div>
+                    <div className="text-primary text-sm break-all">btechecoclean@gmail.com</div>
                   </div>
                 </motion.a>
 
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-semibold text-charcoal">Service Areas</div>
                     <div className="text-charcoal/70 text-sm">
-                      Toronto, Mississauga, Brampton, Oakville, Vaughan
+                      Edmonton, St. Albert, Sherwood Park, Leduc, Spruce Grove
                     </div>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function ContactPage() {
                           value={formData.city}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border-2 border-charcoal/10 rounded-xl focus:border-eco focus:outline-none transition-colors"
-                          placeholder="Toronto"
+                          placeholder="Edmonton"
                         />
                       </div>
 

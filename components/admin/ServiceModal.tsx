@@ -305,14 +305,14 @@ export default function ServiceModal({ service, onClose, onSave }: ServiceModalP
               <button
                 type="button"
                 onClick={onClose}
-                className="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 font-medium transition-colors"
+                className="flex-1 px-6 py-3 bg-gray-300 text-gray-900 rounded-lg hover:bg-gray-400 font-semibold transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 px-6 py-3 bg-gradient-to-r from-eco-500 to-eco-600 text-white rounded-lg hover:shadow-lg font-medium transition-all disabled:opacity-50"
+                className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-lg hover:shadow-xl font-semibold transition-all disabled:opacity-50"
               >
                 {loading ? 'Saving...' : 'Save Service'}
               </button>

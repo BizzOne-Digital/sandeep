@@ -9,7 +9,7 @@ const pricingPlans = [
     icon: Home,
     name: 'Recurring Home Cleaning',
     tagline: 'Perfect for busy families',
-    price: '$129',
+    price: '$99',
     period: 'per visit',
     gradient: 'from-eco to-eco-sage',
     popular: true,
@@ -65,7 +65,7 @@ const pricingPlans = [
 ];
 
 const addOns = [
-  { name: 'Interior Window Cleaning', price: '$40' },
+  { name: 'Interior Window Cleaning', price: '$29' },
   { name: 'Inside Fridge Deep Clean', price: '$35' },
   { name: 'Inside Oven Deep Clean', price: '$40' },
   { name: 'Carpet Steam Cleaning', price: '$80+' },
@@ -252,7 +252,7 @@ export default function PricingPage() {
             <div className="space-y-6 text-charcoal/80">
               <div>
                 <h4 className="font-bold text-charcoal mb-2">🏠 Recurring Home Cleaning</h4>
-                <p>Starting at $129+ per visit. Final price depends on home size, frequency, and specific requirements. Discounts available for weekly service.</p>
+                <p>Starting at $99+ per visit. Final price depends on home size, frequency, and specific requirements. Discounts available for weekly service.</p>
               </div>
               <div>
                 <h4 className="font-bold text-charcoal mb-2">✨ Deep Clean & Move-Out</h4>

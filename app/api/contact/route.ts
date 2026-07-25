@@ -211,7 +211,7 @@ export async function POST(request: NextRequest) {
             <div class="contact-box">
               <h3 style="margin-top: 0;">Need Immediate Assistance?</h3>
               <p style="margin-bottom: 10px;">📞 <strong>Phone:</strong> <a href="tel:+14167105808" style="color: #6F8E73;">+1 416-710-5808</a></p>
-              <p style="margin-bottom: 0;">📧 <strong>Email:</strong> <a href="mailto:benipalsandeep03@gmail.com" style="color: #6F8E73;">benipalsandeep03@gmail.com</a></p>
+              <p style="margin-bottom: 0;">📧 <strong>Email:</strong> <a href="mailto:btechecoclean@gmail.com" style="color: #6F8E73;">btechecoclean@gmail.com</a></p>
             </div>
             
             <p style="margin-top: 30px;">We look forward to making your space spotless!</p>
@@ -223,7 +223,7 @@ export async function POST(request: NextRequest) {
           <div class="footer">
             <p>🌿 100% Eco-Friendly | 🛡️ Fully Insured | ⭐ 5-Star Rated</p>
             <p style="font-size: 12px; color: #999;">
-              Serving Toronto, Mississauga, Brampton, Oakville, and Vaughan
+              Serving Edmonton, St. Albert, Sherwood Park, Leduc, and Spruce Grove
             </p>
           </div>
         </div>
@@ -234,7 +234,7 @@ export async function POST(request: NextRequest) {
     // Send email to business owner
     await transporter.sendMail({
       from: `"B.Tech Eco Clean Bookings" <${process.env.SMTP_USER}>`,
-      to: process.env.OWNER_EMAIL || 'benipalsandeep03@gmail.com',
+      to: process.env.OWNER_EMAIL || 'btechecoclean@gmail.com',
       subject: `🎉 New Booking Request - ${service} - ${name}`,
       html: ownerEmailHTML,
       replyTo: email,

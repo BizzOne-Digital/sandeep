@@ -40,7 +40,7 @@ const SiteSettingsSchema = new Schema<ISiteSettings>(
     },
     email: {
       type: String,
-      default: 'benipalsandeep03@gmail.com',
+      default: 'btechecoclean@gmail.com',
     },
     smsNumber: {
       type: String,
@@ -48,7 +48,7 @@ const SiteSettingsSchema = new Schema<ISiteSettings>(
     },
     serviceAreas: {
       type: [String],
-      default: ['Toronto', 'Mississauga', 'Brampton', 'Oakville'],
+      default: ['Edmonton', 'St. Albert', 'Sherwood Park', 'Leduc'],
     },
     businessHours: {
       type: Map,
@@ -83,7 +83,7 @@ const SiteSettingsSchema = new Schema<ISiteSettings>(
     },
     notificationEmail: {
       type: String,
-      default: 'benipalsandeep03@gmail.com',
+      default: 'btechecoclean@gmail.com',
     },
     defaultSeoTitle: {
       type: String,

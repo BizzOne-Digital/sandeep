@@ -69,7 +69,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-charcoal/70 leading-relaxed mb-8">
-              We're a Toronto-based cleaning company dedicated to creating healthier, happier spaces through eco-friendly practices and exceptional service.
+              We're an Edmonton-based cleaning company dedicated to creating healthier, happier spaces through eco-friendly practices and exceptional service.
             </p>
           </motion.div>
         </div>
@@ -125,10 +125,10 @@ export default function AboutPage() {
                   B.Tech Eco Clean was founded with a simple mission: to provide exceptional cleaning services that don't compromise on environmental responsibility or quality.
                 </p>
                 <p>
-                  Starting in Toronto, we saw a gap in the market for cleaning services that truly cared about both their clients and the planet. We built our company on the foundation of plant-based products, meticulous attention to detail, and genuine care for every space we clean.
+                  Starting in Edmonton, we saw a gap in the market for cleaning services that truly cared about both their clients and the planet. We built our company on the foundation of plant-based products, meticulous attention to detail, and genuine care for every space we clean.
                 </p>
                 <p>
-                  Today, we serve homes and businesses across Toronto, Mississauga, Brampton, Oakville, and Vaughan. Our team has grown, but our commitment remains the same: deliver cleaning services that make spaces healthier, happier, and more sustainable.
+                  Today, we serve homes and businesses across Edmonton, St. Albert, Sherwood Park, Leduc, and Spruce Grove. Our team has grown, but our commitment remains the same: deliver cleaning services that make spaces healthier, happier, and more sustainable.
                 </p>
               </div>
             </motion.div>

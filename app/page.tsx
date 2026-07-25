@@ -11,7 +11,7 @@ import FinalCTA from '@/components/home/FinalCTA';
 export const metadata = {
   title: 'B.Tech Eco Clean - A Calmer Home. A Sharper Office.',
   description:
-    'Professional residential and commercial cleaning services using plant-based products. Serving Toronto, Mississauga, Brampton, and surrounding areas.',
+    'Professional residential and commercial cleaning services using plant-based products. Serving Edmonton, St. Albert, Sherwood Park, and surrounding areas.',
 };
 
 export default function HomePage() {

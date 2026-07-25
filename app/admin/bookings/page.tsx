@@ -14,7 +14,7 @@ export default function BookingsPage() {
         <p className="text-gray-500 text-lg">Bookings dashboard coming soon...</p>
         <p className="text-gray-400 text-sm mt-2">View all booking requests from the contact form</p>
         <p className="text-gray-400 text-xs mt-4">
-          For now, booking notifications are sent to: benipalsandeep03@gmail.com
+          For now, booking notifications are sent to: btechecoclean@gmail.com
         </p>
       </div>
     </div>

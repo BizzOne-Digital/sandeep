@@ -65,9 +65,9 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               +1 416-710-5808
             </a>
-            <a href="mailto:benipalsandeep03@gmail.com" className="hover:text-eco transition-colors flex items-center gap-1">
+            <a href="mailto:btechecoclean@gmail.com" className="hover:text-eco transition-colors flex items-center gap-1">
               <Mail className="w-4 h-4" />
-              benipalsandeep03@gmail.com
+              btechecoclean@gmail.com
             </a>
           </div>
         </div>
