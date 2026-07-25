@@ -76,14 +76,14 @@ export default function Header() {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <motion.div
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6, ease: 'easeInOut' }}
-                className="relative w-12 h-12 rounded-full bg-gradient-to-br from-eco to-eco-sage flex items-center justify-center shadow-lg"
-              >
-                <span className="text-white font-bold text-xl">B</span>
-              </motion.div>
+            <Link href="/" className="flex items-center gap-3 group">
+              <motion.img
+                src="/images/logo-icon.png"
+                alt="B.Tech Eco Clean Logo"
+                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              />
               <div className="hidden md:block">
                 <div className="text-primary font-bold text-xl leading-tight">B.Tech Eco Clean</div>
                 <div className="text-eco text-xs uppercase tracking-wider">Plant-based cleaning</div>

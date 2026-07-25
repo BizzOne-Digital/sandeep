@@ -6,6 +6,7 @@ import gsap from 'gsap';
 
 export default function IntroAnimation() {
   const [showIntro, setShowIntro] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     // Check if intro has been shown in this session
@@ -15,28 +16,33 @@ export default function IntroAnimation() {
     if (!introShown) {
       console.log('Starting intro animation');
       setShowIntro(true);
+      setIsAnimating(true);
       sessionStorage.setItem('introShown', 'true');
 
-      // Lock body scroll during intro
+      // Lock body scroll during intro - keep it locked!
       document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
 
-      // Set timeout for intro duration - 3 seconds animation + 0.5 seconds exit
-      const duration = prefersReducedMotion ? 800 : 3500;
+      // Set timeout for intro duration - 3.5 seconds animation + 1 second exit
+      const duration = prefersReducedMotion ? 800 : 4500;
       console.log(`Intro will hide after ${duration}ms`);
       
       const timer = setTimeout(() => {
         console.log('Timer fired - hiding intro animation');
         setShowIntro(false);
-        // Unlock scroll after exit animation completes
+        // Unlock scroll ONLY after complete exit
         setTimeout(() => {
+          setIsAnimating(false);
           document.body.style.overflow = '';
+          document.body.style.height = '';
           console.log('Scroll unlocked, intro complete');
-        }, 1000); // Increased delay to ensure exit animation completes
+        }, 1200); // Wait for full exit animation
       }, duration);
 
       return () => {
         clearTimeout(timer);
         document.body.style.overflow = '';
+        document.body.style.height = '';
       };
     } else {
       console.log('Intro already shown');
@@ -100,24 +106,37 @@ export default function IntroAnimation() {
     console.log('Skip button clicked');
     setShowIntro(false);
     setTimeout(() => {
+      setIsAnimating(false);
       document.body.style.overflow = '';
-    }, 1000);
+      document.body.style.height = '';
+    }, 1200);
   };
 
   const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   return (
-    <AnimatePresence mode="wait" onExitComplete={() => console.log('Exit animation completed')}>
-      {showIntro && (
-        <motion.div
-          initial={{ opacity: 1, x: 0 }}
-          exit={{ x: '100%', opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
-          style={{
-            background: 'linear-gradient(135deg, #041E3A 0%, #062B52 50%, #0A3D6E 100%)',
-          }}
-        >
+    <>
+      {/* Prevent page from showing during intro */}
+      {isAnimating && (
+        <style jsx global>{`
+          body > *:not([data-intro-animation]) {
+            visibility: hidden !important;
+          }
+        `}</style>
+      )}
+      
+      <AnimatePresence mode="wait" onExitComplete={() => console.log('Exit animation completed')}>
+        {showIntro && (
+          <motion.div
+            data-intro-animation
+            initial={{ opacity: 1, x: 0 }}
+            exit={{ x: '100%', opacity: 0 }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #041E3A 0%, #062B52 50%, #0A3D6E 100%)',
+            }}
+          >
           {/* Skip button */}
           <motion.button
             initial={{ opacity: 0 }}
@@ -286,5 +305,6 @@ export default function IntroAnimation() {
         </motion.div>
       )}
     </AnimatePresence>
+    </>
   );
 }

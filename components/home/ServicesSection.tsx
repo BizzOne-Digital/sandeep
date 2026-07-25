@@ -8,9 +8,9 @@ const services = [
   {
     icon: Home,
     name: 'Recurring Home Cleaning',
+    slug: 'recurring-home-cleaning',
     category: 'Residential',
     description: 'Weekly, bi-weekly, or monthly visits from a team that learns your home.',
-    price: 'from $129',
     gradient: 'from-eco to-eco-sage',
     image: '/images/services/recurring-home.jpg',
     featured: true,
@@ -18,9 +18,9 @@ const services = [
   {
     icon: Sparkles,
     name: 'Deep Clean & Move-Out',
+    slug: 'deep-clean-move-out',
     category: 'Residential',
     description: 'Top-to-bottom detailed cleaning for seasonal resets, move-ins, move-outs.',
-    price: 'from $249',
     gradient: 'from-primary to-primary-dark',
     image: '/images/services/deep-clean.jpg',
     featured: false,
@@ -28,9 +28,9 @@ const services = [
   {
     icon: Building2,
     name: 'Office & Coworking',
+    slug: 'office-coworking',
     category: 'Commercial',
     description: 'After-hours cleaning that keeps your team healthy and workspace professional.',
-    price: 'custom quote',
     gradient: 'from-eco-sage to-eco-forest',
     image: '/images/services/office.jpg',
     featured: false,
@@ -38,9 +38,9 @@ const services = [
   {
     icon: Building2,
     name: 'Retail & Storefronts',
+    slug: 'retail-storefronts',
     category: 'Commercial',
     description: 'Consistent presentation cleaning from front-of-house to stockroom.',
-    price: 'custom quote',
     gradient: 'from-primary-light to-primary',
     image: '/images/services/retail.jpg',
     featured: false,
@@ -48,9 +48,9 @@ const services = [
   {
     icon: Hammer,
     name: 'Post-Construction Cleaning',
+    slug: 'post-construction',
     category: 'Specialty',
     description: 'Removal of dust, debris, and construction residue.',
-    price: 'quote',
     gradient: 'from-eco-forest to-charcoal',
     image: '/images/services/post-construction.jpg',
     featured: false,
@@ -58,9 +58,9 @@ const services = [
   {
     icon: Leaf,
     name: 'Green Deep Clean',
+    slug: 'green-deep-clean',
     category: 'Eco',
     description: 'Plant-based products and HEPA vacuuming for sensitive homes and offices.',
-    price: 'quote',
     gradient: 'from-eco-light to-eco',
     image: '/images/services/green-clean.jpg',
     featured: true,
@@ -179,17 +179,14 @@ export default function ServicesSection() {
                   </h3>
                   <p className="text-charcoal/70 mb-6 leading-relaxed">{service.description}</p>
 
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-eco to-eco-sage bg-clip-text text-transparent">
-                      {service.price}
-                    </div>
+                  {/* CTA Button */}
+                  <div className="flex justify-center">
                     <Link
-                      href={`/contact?service=${service.name.toLowerCase().replace(/ /g, '-')}`}
-                      className="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transition-all hover:scale-105"
+                      href={`/services/${service.slug}`}
+                      className="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-eco to-eco-sage text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all hover:scale-105"
                     >
-                      Book Now
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      View Details
+                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>

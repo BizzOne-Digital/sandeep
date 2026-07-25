@@ -94,9 +94,11 @@ export default function Footer() {
           >
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-eco to-eco-sage flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">B</span>
-                </div>
+                <img
+                  src="/images/logo-icon.png"
+                  alt="B.Tech Eco Clean Logo"
+                  className="w-12 h-12 object-contain"
+                />
                 <div>
                   <div className="font-bold text-lg">B.Tech Eco Clean</div>
                   <div className="text-eco-light text-xs">Plant-based cleaning</div>
