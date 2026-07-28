@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import Header from './Header';
 import Footer from './Footer';
 import IntroAnimation from './IntroAnimation';
+import ChatWidget from './chatbot/ChatWidget';
 
 export default function ConditionalLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -23,6 +24,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
