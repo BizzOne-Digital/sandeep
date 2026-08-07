@@ -49,8 +49,9 @@ async function sendBookingEmails(data: {
     message,
   } = data;
 
-  const smtpUser = process.env.SMTP_USER;
-  const smtpPassword = process.env.SMTP_PASSWORD;
+  const smtpUser = process.env.SMTP_USER?.trim();
+  // Gmail app passwords are often copied with spaces — strip them
+  const smtpPassword = process.env.SMTP_PASSWORD?.replace(/\s+/g, '');
 
   if (!smtpUser || !smtpPassword) {
     throw new Error(
@@ -59,6 +60,7 @@ async function sendBookingEmails(data: {
   }
 
   const transporter = nodemailer.createTransport({
+    service: 'gmail',
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: Number(process.env.SMTP_PORT || 587),
     secure: false,
@@ -67,6 +69,9 @@ async function sendBookingEmails(data: {
       pass: smtpPassword,
     },
   });
+
+  // Verify credentials before sending (clearer errors)
+  await transporter.verify();
 
   const safe = {
     name: escapeHtml(name),
@@ -276,7 +281,9 @@ async function sendBookingEmails(data: {
     process.env.BOOKING_NOTIFICATION_EMAIL ||
     process.env.OWNER_EMAIL ||
     'btechecoclean@gmail.com';
-  const fromAddress = process.env.SMTP_FROM || smtpUser;
+  const rawFrom = process.env.SMTP_FROM?.trim();
+  const fromAddress =
+    rawFrom && !rawFrom.includes('your-gmail') ? rawFrom : smtpUser;
 
   await transporter.sendMail({
     from: `"B.Tech Eco Clean Bookings" <${fromAddress}>`,
